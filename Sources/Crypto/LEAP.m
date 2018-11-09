@@ -72,7 +72,12 @@ void NtPasswordHash(char *secret, NSInteger secret_len, unsigned char *hash)
         unicodePassword[i * 2] = (unsigned char) secret[i];
 
     /* Unicode is 2 bytes per char */
-    md4(unicodePassword, secret_len * 2, hash);
+    //TODO PAULO_BORGES
+    // MUST FIND AWAY TO USE MD4 - Crack -> Word List Attack -> Agains LEAP Key doesnt work 
+    //mbedtls_md4_ret(unicodePassword, secret_len * 2, hash);
+    
+    //int ret = 1;
+    //if( ( ret =  mbedtls_md4_ret(unicodePassword, secret_len * 2, hash) ) != 0 )
 }
 
 NSInteger testChallenge(const unsigned char* challenge, const unsigned char* response, unsigned char *zpwhash) 

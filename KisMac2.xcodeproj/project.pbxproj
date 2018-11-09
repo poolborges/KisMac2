@@ -162,6 +162,7 @@
 		A5A2F5AF19DDA55B0046299A /* NetworkWEP.tif in Resources */ = {isa = PBXBuildFile; fileRef = A5A2F5A919DDA55B0046299A /* NetworkWEP.tif */; };
 		A5A2F5B019DDA55B0046299A /* NetworkWPA.tif in Resources */ = {isa = PBXBuildFile; fileRef = A5A2F5AA19DDA55B0046299A /* NetworkWPA.tif */; };
 		A5A6FA7E1B289F65006B90E1 /* GBStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A6FA791B289F65006B90E1 /* GBStorage.m */; };
+		FD39AD102195FD32006B644D /* platform_util.c in Sources */ = {isa = PBXBuildFile; fileRef = FD39AD0F2195FD32006B644D /* platform_util.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -437,6 +438,7 @@
 		A5A2F5AA19DDA55B0046299A /* NetworkWPA.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = NetworkWPA.tif; sourceTree = "<group>"; };
 		A5A6FA781B289F65006B90E1 /* GBStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBStorage.h; sourceTree = "<group>"; };
 		A5A6FA791B289F65006B90E1 /* GBStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBStorage.m; sourceTree = "<group>"; };
+		FD39AD0F2195FD32006B644D /* platform_util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = platform_util.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -964,12 +966,13 @@
 				A599CC9E1B82349000C48A5D /* sha1.h */,
 			);
 			name = include;
-			path = include/polarssl;
+			path = include/mbedtls;
 			sourceTree = "<group>";
 		};
 		A535369A180ABCE0008BB6A1 /* library */ = {
 			isa = PBXGroup;
 			children = (
+				FD39AD0F2195FD32006B644D /* platform_util.c */,
 				A5353974180B1C99008BB6A1 /* sha1.c */,
 				A53536B4180ABCE0008BB6A1 /* md4.c */,
 				A53536B5180ABCE0008BB6A1 /* md5.c */,
@@ -1066,11 +1069,11 @@
 				BuildIndependentTargetsInParallel = NO;
 				CLASSPREFIX = KSM;
 				LastTestingUpgradeCheck = 0600;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "IGR Software";
 				TargetAttributes = {
 					8D1107260486CEB800E47090 = {
-						DevelopmentTeam = DMP42GVPJ3;
+						DevelopmentTeam = 2C8R956V8M;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1237,6 +1240,7 @@
 				0097243A06E51A99004307EA /* BITextView.m in Sources */,
 				0090AC8606E5E3250096C5FC /* MapControlPanel.m in Sources */,
 				00E1426E06E62A44009DC179 /* PointView.m in Sources */,
+				FD39AD102195FD32006B644D /* platform_util.c in Sources */,
 				00A622AA06FEE4FB005D248A /* Trace.m in Sources */,
 				009D64F306FF73BA00B0F1EC /* MapViewAreaView.mm in Sources */,
 				00875D1C0708ADB300CACFCB /* WaveHelper.m in Sources */,
@@ -1452,7 +1456,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = DMP42GVPJ3;
+				DEVELOPMENT_TEAM = 2C8R956V8M;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 					"$(SRCROOT)/Resources",
@@ -1490,12 +1494,20 @@
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1521,12 +1533,20 @@
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1555,7 +1575,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = DMP42GVPJ3;
+				DEVELOPMENT_TEAM = 2C8R956V8M;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 					"$(SRCROOT)/Resources",
@@ -1590,6 +1610,7 @@
 		6910302E0F9E313700C4E466 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1601,6 +1622,7 @@
 		691030300F9E313700C4E466 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
