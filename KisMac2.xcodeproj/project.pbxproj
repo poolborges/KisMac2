@@ -1482,7 +1482,7 @@
 					"-framework",
 					Apple80211,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.igrsoft.kismac;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.poolborges.KisMac2;
 				PRODUCT_NAME = KisMac2;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
@@ -1600,7 +1600,7 @@
 					"-framework",
 					Apple80211,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.igrsoft.kismac;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.poolborges.KisMac2;
 				PRODUCT_NAME = KisMac2;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;

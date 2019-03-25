@@ -1,22 +1,26 @@
-# PLEASE NOTE, THIS PROJECT IS NO LONGER BEING MAINTAINED
+# PB-KisMac2 Fork of KisMac2 0.3.4-alpha4
+
+This fork will be temporary call (codename) PB-KisMac2
+
+PB for (PoolBorges)
 
 * * *
 
-[![Build Status](https://travis-ci.org/IGRSoft/KisMac2.svg)](https://travis-ci.org/IGRSoft/KisMac2)
+[![Build Status](https://travis-ci.org/poolborges/KisMac2.svg?branch=master)](https://travis-ci.org/poolborges/KisMac2)
 [![Platform](https://img.shields.io/badge/platform-OS%20X-lightgrey.svg?style=flat)](http://www.apple.com/osx/)
 [![License](https://img.shields.io/badge/license-GPL%202.0-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
-<img src="https://raw.githubusercontent.com/IGRSoft/KisMac2/master/Resources/Images.xcassets/AppIcon.appiconset/icon_128x128.png"> KisMac2
+<img src="https://raw.githubusercontent.com/poolborges/KisMac2/master/Resources/Images.xcassets/AppIcon.appiconset/icon_128x128.png"> KisMac2
 ======
 
 KisMAC is a free, open source wireless stumbling and security tool for Mac OS X. 
 
-<img src="https://raw.githubusercontent.com/IGRSoft/KisMac2/master/Resources/screenshot.png">
+<img src="https://raw.githubusercontent.com/poolborges/KisMac2/master/Resources/screenshot.png">
 
 Issue tracking:
 -------
 
-Going forward, please use the tracker <a href="https://github.com/IGRSoft/KisMac2/issues">here on GitHub</a>.
+Going forward, please use the tracker <a href="https://github.com/poolborges/KisMac2/issues">here on GitHub</a>.
 
 The Trac for the original KisMac is at http://trac.kismac-ng.org
 
@@ -32,7 +36,7 @@ Whats new:
 
 How Build:
 -------
-* git clone https://github.com/IGRSoft/KisMac2.git ./KissMac2
+* git clone https://github.com/poolborges/KisMac2.git ./KissMac2
 * cd KissMac2
 * git submodule update --init --recursive
 * open KisMac2.xcworkspace
@@ -41,13 +45,15 @@ How Build:
 Current Developer and Origin:
 -------
 
-This project, KisMac2, is an active project to continue where original development of KisMac has stopped. The lead developer is Vitalii Parovishnyk (Korich) - http://IGRSoft.com and you are welcome to contact us and join in the project.
+This project, current code name PB-KisMac2 (Should be KisMac3 ??), is an active project to continue where development of KisMac2 has stopped. You are welcome to contact and join in the project.
+
+Vitalii Parovishnyk (Korich) lead developer of KisMac2. KisMac2 not actively maintained since 2011
 
 Michael Rossberg / Geoffrey Kruse / kismac-ng.org is the original KisMac and the project is not actively maintained since 2011, please see the <a href="https://en.wikipedia.org/wiki/KisMAC">KisMac Wikipedia page</a> for more information on the earlier history of that project.
 
 
 
-Nightly Builds:
+Releases:
 -------
 
-http://downloads.igrsoft.com/beta/KisMac2.zip
+https://github.com/poolborges/KisMac2/releases/
