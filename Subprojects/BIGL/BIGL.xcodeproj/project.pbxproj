@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000238DE06933029007C44ED /* BIGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000238DC06933029007C44ED /* BIGLView.m */; };
+		0002399806933380007C44ED /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0002399706933380007C44ED /* OpenGL.framework */; };
+		00023A0206933D86007C44ED /* BIGL.h in Headers */ = {isa = PBXBuildFile; fileRef = 000239B20693365E007C44ED /* BIGL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00023A0306933D86007C44ED /* BIGLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 000238DB06933029007C44ED /* BIGLView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00023ACC069347CC007C44ED /* BIGLSubView.h in Headers */ = {isa = PBXBuildFile; fileRef = 00023ACA069347CC007C44ED /* BIGLSubView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00023ACD069347CC007C44ED /* BIGLSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00023ACB069347CC007C44ED /* BIGLSubView.m */; };
+		00023AD606934F9B007C44ED /* BIGLTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 00023AD406934F9B007C44ED /* BIGLTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00023AD706934F9B007C44ED /* BIGLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00023AD506934F9B007C44ED /* BIGLTextView.m */; };
+		005D98DB069D9BF900A4BA7B /* BIGLCocoaView.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D98D9069D9BF900A4BA7B /* BIGLCocoaView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		005D98DC069D9BF900A4BA7B /* BIGLCocoaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 005D98DA069D9BF900A4BA7B /* BIGLCocoaView.m */; };
+		007FF97E06C6E07A006B684A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 007FF97D06C6E07A006B684A /* Cocoa.framework */; };
+		00A299F80693EC1500E39953 /* BIGLPolyView.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A299F60693EC1500E39953 /* BIGLPolyView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00A299F90693EC1500E39953 /* BIGLPolyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A299F70693EC1500E39953 /* BIGLPolyView.m */; };
+		00C134710694ACDB004F02A8 /* BIGLGraphView.h in Headers */ = {isa = PBXBuildFile; fileRef = 00C1346F0694ACDB004F02A8 /* BIGLGraphView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00C134720694ACDB004F02A8 /* BIGLGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C134700694ACDB004F02A8 /* BIGLGraphView.m */; };
+		00F514C806944F0500F4D67C /* BIGLLineView.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F514C606944F0500F4D67C /* BIGLLineView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00F514C906944F0500F4D67C /* BIGLLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F514C706944F0500F4D67C /* BIGLLineView.m */; };
+		00F514DF0694559400F4D67C /* BIGLImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F514DD0694559400F4D67C /* BIGLImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00F514E00694559400F4D67C /* BIGLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F514DE0694559400F4D67C /* BIGLImageView.m */; };
+		8DC2EF510486A6940098B216 /* BIGL_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCF5E0370ADEE00C91783 /* BIGL_Prefix.pch */; };
+		A5BED1BE1A21092000023724 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5BED1BC1A21092000023724 /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		000238DB06933029007C44ED /* BIGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIGLView.h; sourceTree = "<group>"; };
+		000238DC06933029007C44ED /* BIGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIGLView.m; sourceTree = "<group>"; };
+		0002399706933380007C44ED /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		000239B20693365E007C44ED /* BIGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIGL.h; sourceTree = "<group>"; };
+		00023ACA069347CC007C44ED /* BIGLSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIGLSubView.h; sourceTree = "<group>"; };
+		00023ACB069347CC007C44ED /* BIGLSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIGLSubView.m; sourceTree = "<group>"; };
+		00023AD406934F9B007C44ED /* BIGLTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIGLTextView.h; sourceTree = "<group>"; };
+		00023AD506934F9B007C44ED /* BIGLTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIGLTextView.m; sourceTree = "<group>"; };
+		005D98D9069D9BF900A4BA7B /* BIGLCocoaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIGLCocoaView.h; sourceTree = "<group>"; };
+		005D98DA069D9BF900A4BA7B /* BIGLCocoaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIGLCocoaView.m; sourceTree = "<group>"; };
+		007FF97D06C6E07A006B684A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		00A299F60693EC1500E39953 /* BIGLPolyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIGLPolyView.h; sourceTree = "<group>"; };
+		00A299F70693EC1500E39953 /* BIGLPolyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIGLPolyView.m; sourceTree = "<group>"; };
+		00C1346F0694ACDB004F02A8 /* BIGLGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIGLGraphView.h; sourceTree = "<group>"; };
+		00C134700694ACDB004F02A8 /* BIGLGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIGLGraphView.m; sourceTree = "<group>"; };
+		00F514C606944F0500F4D67C /* BIGLLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIGLLineView.h; sourceTree = "<group>"; };
+		00F514C706944F0500F4D67C /* BIGLLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIGLLineView.m; sourceTree = "<group>"; };
+		00F514DD0694559400F4D67C /* BIGLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIGLImageView.h; sourceTree = "<group>"; };
+		00F514DE0694559400F4D67C /* BIGLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIGLImageView.m; sourceTree = "<group>"; };
+		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		32DBCF5E0370ADEE00C91783 /* BIGL_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIGL_Prefix.pch; sourceTree = "<group>"; };
+		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8DC2EF5B0486A6940098B216 /* BIGL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BIGL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5BED1BD1A21092000023724 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DC2EF560486A6940098B216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0002399806933380007C44ED /* OpenGL.framework in Frameworks */,
+				007FF97E06C6E07A006B684A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5B0486A6940098B216 /* BIGL.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* BIGL */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = BIGL;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
+				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A5BED1BC1A21092000023724 /* InfoPlist.strings */,
+				8DC2EF5A0486A6940098B216 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				000239B20693365E007C44ED /* BIGL.h */,
+				000238DB06933029007C44ED /* BIGLView.h */,
+				000238DC06933029007C44ED /* BIGLView.m */,
+				00023ACA069347CC007C44ED /* BIGLSubView.h */,
+				00023ACB069347CC007C44ED /* BIGLSubView.m */,
+				00023AD406934F9B007C44ED /* BIGLTextView.h */,
+				00023AD506934F9B007C44ED /* BIGLTextView.m */,
+				00A299F60693EC1500E39953 /* BIGLPolyView.h */,
+				00A299F70693EC1500E39953 /* BIGLPolyView.m */,
+				00F514C606944F0500F4D67C /* BIGLLineView.h */,
+				00F514C706944F0500F4D67C /* BIGLLineView.m */,
+				00F514DD0694559400F4D67C /* BIGLImageView.h */,
+				00F514DE0694559400F4D67C /* BIGLImageView.m */,
+				00C1346F0694ACDB004F02A8 /* BIGLGraphView.h */,
+				00C134700694ACDB004F02A8 /* BIGLGraphView.m */,
+				005D98D9069D9BF900A4BA7B /* BIGLCocoaView.h */,
+				005D98DA069D9BF900A4BA7B /* BIGLCocoaView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				007FF97D06C6E07A006B684A /* Cocoa.framework */,
+				0002399706933380007C44ED /* OpenGL.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF5E0370ADEE00C91783 /* BIGL_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8DC2EF500486A6940098B216 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00023A0206933D86007C44ED /* BIGL.h in Headers */,
+				00023A0306933D86007C44ED /* BIGLView.h in Headers */,
+				00023ACC069347CC007C44ED /* BIGLSubView.h in Headers */,
+				00023AD606934F9B007C44ED /* BIGLTextView.h in Headers */,
+				00A299F80693EC1500E39953 /* BIGLPolyView.h in Headers */,
+				00F514C806944F0500F4D67C /* BIGLLineView.h in Headers */,
+				00F514DF0694559400F4D67C /* BIGLImageView.h in Headers */,
+				00C134710694ACDB004F02A8 /* BIGLGraphView.h in Headers */,
+				005D98DB069D9BF900A4BA7B /* BIGLCocoaView.h in Headers */,
+				8DC2EF510486A6940098B216 /* BIGL_Prefix.pch in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8DC2EF4F0486A6940098B216 /* BIGL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00B4DCB7086C6A35009A8F23 /* Build configuration list for PBXNativeTarget "BIGL" */;
+			buildPhases = (
+				8DC2EF500486A6940098B216 /* Headers */,
+				8DC2EF520486A6940098B216 /* Resources */,
+				8DC2EF540486A6940098B216 /* Sources */,
+				8DC2EF560486A6940098B216 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BIGL;
+			productInstallPath = "$(HOME)/Library/Frameworks";
+			productName = GLCocoa;
+			productReference = 8DC2EF5B0486A6940098B216 /* BIGL.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+			};
+			buildConfigurationList = 00B4DCBB086C6A35009A8F23 /* Build configuration list for PBXProject "BIGL" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* BIGL */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DC2EF4F0486A6940098B216 /* BIGL */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DC2EF520486A6940098B216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5BED1BE1A21092000023724 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DC2EF540486A6940098B216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000238DE06933029007C44ED /* BIGLView.m in Sources */,
+				00023ACD069347CC007C44ED /* BIGLSubView.m in Sources */,
+				00023AD706934F9B007C44ED /* BIGLTextView.m in Sources */,
+				00A299F90693EC1500E39953 /* BIGLPolyView.m in Sources */,
+				00F514C906944F0500F4D67C /* BIGLLineView.m in Sources */,
+				00F514E00694559400F4D67C /* BIGLImageView.m in Sources */,
+				00C134720694ACDB004F02A8 /* BIGLGraphView.m in Sources */,
+				005D98DC069D9BF900A4BA7B /* BIGLCocoaView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A5BED1BC1A21092000023724 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5BED1BD1A21092000023724 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		00B4DCB8086C6A35009A8F23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DEFINES_MODULE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BIGL_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-seg1addr",
+					0x10000000,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.igrsoft.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = BIGL;
+				SECTORDER_FLAGS = "";
+			};
+			name = Debug;
+		};
+		00B4DCBC086C6A35009A8F23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		69DFB5DA0F8B1675000E5AF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		69DFB5DB0F8B1675000E5AF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DEFINES_MODULE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BIGL_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-seg1addr",
+					0x10000000,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.igrsoft.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = BIGL;
+				SECTORDER_FLAGS = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00B4DCB7086C6A35009A8F23 /* Build configuration list for PBXNativeTarget "BIGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B4DCB8086C6A35009A8F23 /* Debug */,
+				69DFB5DB0F8B1675000E5AF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		00B4DCBB086C6A35009A8F23 /* Build configuration list for PBXProject "BIGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B4DCBC086C6A35009A8F23 /* Debug */,
+				69DFB5DA0F8B1675000E5AF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
