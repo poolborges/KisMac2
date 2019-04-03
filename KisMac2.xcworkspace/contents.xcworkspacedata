@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Subprojects/BIGL/BIGL.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Subprojects/BIGeneric/BIGeneric.xcodeproj">
    </FileRef>
    <FileRef
