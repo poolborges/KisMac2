@@ -5,9 +5,9 @@
       location = "group:Subprojects/BIGL/BIGL.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Subprojects/BIGeneric/BIGeneric.xcodeproj">
+      location = "container:KisMac2.xcodeproj">
    </FileRef>
    <FileRef
-      location = "container:KisMac2.xcodeproj">
+      location = "group:Subprojects/BIGeneric/BIGeneric.xcodeproj">
    </FileRef>
 </Workspace>
