@@ -181,13 +181,6 @@
 			remoteGlobalIDString = 8D1107260486CEB800E47090;
 			remoteInfo = KisMac2;
 		};
-		FD6A37D6224D24D9008F8B03 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FD6A37D2224D24D9008F8B03 /* BIGL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
-			remoteInfo = BIGL;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -457,7 +450,6 @@
 		FD6A37C7224D1810008F8B03 /* KisMACTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KisMACTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6A37C9224D1810008F8B03 /* KisMACTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KisMACTests.m; sourceTree = "<group>"; };
 		FD6A37CB224D1810008F8B03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD6A37D2224D24D9008F8B03 /* BIGL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BIGL.xcodeproj; path = Subprojects/BIGL/BIGL.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -848,7 +840,6 @@
 				FD6A37C8224D1810008F8B03 /* KisMACTests */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				FD6A37D2224D24D9008F8B03 /* BIGL.xcodeproj */,
 			);
 			name = KisMAC;
 			sourceTree = "<group>";
@@ -1075,14 +1066,6 @@
 			path = KisMACTests;
 			sourceTree = "<group>";
 		};
-		FD6A37D3224D24D9008F8B03 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FD6A37D7224D24D9008F8B03 /* BIGL.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1162,12 +1145,6 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* KisMAC */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = FD6A37D3224D24D9008F8B03 /* Products */;
-					ProjectRef = FD6A37D2224D24D9008F8B03 /* BIGL.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* KisMac2 */,
@@ -1176,16 +1153,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		FD6A37D7224D24D9008F8B03 /* BIGL.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = BIGL.framework;
-			remoteRef = FD6A37D6224D24D9008F8B03 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D1107290486CEB800E47090 /* Resources */ = {
