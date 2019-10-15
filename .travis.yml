@@ -1,6 +1,21 @@
+os: osx
 language: objective-c
-osx_image: xcode8.3
-xcode_workspace: KisMac2.xcworkspace
-xcode_scheme: KisMac2
-xcode_sdk: macosx10.12
-before_install: git submodule update --init --recursive
+osx_image: xcode11
+
+
+jobs:
+  include:
+    - name: Darwin 
+      env:
+        - WORKSPACE='KisMac2.xcworkspace'
+        - MACOS_SCHEME='KisMac2'
+        - MACOS_DESTINATION='platform=OS X'
+      before_install:
+        - git submodule update --init --recursive
+      script:
+        - set -o pipefail
+        - xcodebuild clean build test -workspace "$WORKSPACE" -scheme "$MACOS_SCHEME" -destination "$MACOS_DESTINATION" | XCPRETTY_JSON_FILE_OUTPUT="xcodebuild-macos.json" xcpretty -f `xcpretty-json-formatter`
+
+branches:
+  only:
+    - master
