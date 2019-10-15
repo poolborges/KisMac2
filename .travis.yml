@@ -14,7 +14,7 @@ jobs:
         - git submodule update --init --recursive
       script:
         - set -o pipefail
-        - xcodebuild clean build test -workspace "$WORKSPACE" -scheme "$MACOS_SCHEME" -destination "$MACOS_DESTINATION" | XCPRETTY_JSON_FILE_OUTPUT="xcodebuild-macos.json" xcpretty -f `xcpretty-json-formatter`
+        - xcodebuild clean build -workspace "$WORKSPACE" -scheme "$MACOS_SCHEME" -destination "$MACOS_DESTINATION" | XCPRETTY_JSON_FILE_OUTPUT="xcodebuild-macos.json" xcpretty -f `xcpretty-json-formatter`
 
 branches:
   only:
