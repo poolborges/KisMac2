@@ -1,3 +1,4 @@
 [submodule "Subprojects/polarssl"]
 	path = Subprojects/polarssl
-	url = https://github.com/polarssl/polarssl.git
+	url = https://github.com/ARMmbed/mbedtls.git
+	branch = mbedtls-2.17
