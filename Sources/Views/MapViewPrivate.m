@@ -40,8 +40,8 @@
 - (void)_align {
     NSPoint loc;
     
-    loc.x = -_center.x * _zoomFact + (_frame.size.width / 2);
-    loc.y = -_center.y * _zoomFact + (_frame.size.height / 2);
+    loc.x = -_center.x * _zoomFact + (self.frame.size.width / 2);
+    loc.y = -_center.y * _zoomFact + (self.frame.size.height / 2);
     
     [_moveContainer setLocation:loc];
 }
@@ -49,15 +49,15 @@
 - (void)_alignStatus {
     NSPoint loc;
     
-    loc.x = (_frame.size.width - [_statusView size].width)  / 2;
-    loc.y = (_frame.size.height- [_statusView size].height) / 2;
+    loc.x = (self.frame.size.width - [_statusView size].width)  / 2;
+    loc.y = (self.frame.size.height- [_statusView size].height) / 2;
     [_statusView setLocation:loc];
 }
 
 - (void)_alignControlPanel {
     NSPoint loc;
     
-    loc.x =  (_frame.size.width - [_controlPanel size].width - 5);
+    loc.x =  (self.frame.size.width - [_controlPanel size].width - 5);
     loc.y = 5;
     [_controlPanel setLocation:loc];
 }

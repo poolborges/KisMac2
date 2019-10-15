@@ -366,7 +366,7 @@
 #pragma mark -
 
 - (void)drawRectSub:(NSRect)rect { 
-    [_mapImage drawInRect:rect fromRect:NSMakeRect(_center.x + ((rect.origin.x - (_frame.size.width / 2)) / _zoomFact), _center.y + ((rect.origin.y - (_frame.size.height / 2)) / _zoomFact), rect.size.width / _zoomFact, rect.size.height / _zoomFact) operation:NSCompositeCopy fraction:1.0];
+    [_mapImage drawInRect:rect fromRect:NSMakeRect(_center.x + ((rect.origin.x - (self.frame.size.width / 2)) / _zoomFact), _center.y + ((rect.origin.y - (self.frame.size.height / 2)) / _zoomFact), rect.size.width / _zoomFact, rect.size.height / _zoomFact) operation:NSCompositeCopy fraction:1.0];
 }
 
 #pragma mark -
