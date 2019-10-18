@@ -1234,7 +1234,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -ex\n\necho $ACTION\n\n\n[ \"$ACTION\" = \"build\" ] || exit 0\n[ \"$BUILD_VARIANTS\" = \"normal\" ] || exit 0\n\ndir=\"$TEMP_FILES_DIR/disk\"\ndmg=\"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.dmg\"\n\nrm -rf \"$dir\"\nmkdir \"$dir\"\ncp -R \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.app\" \"$dir\"\n\nmkdir \"$dir/.background\"\ncp \"$SRCROOT/DMG Artwork/dmgBackground.tiff\" \"$dir/.background\"\nln -s /Applications $dir\n\nrm -f \"$dmg\"\nhdiutil create  -verbose -srcfolder \"$dir\" -format UDRW -volname \"$PROJECT_NAME\" \"$dmg\"\nhdiutil internet-enable -yes \"$dmg\"\nrm -rf \"$dir\"\n";
+			shellScript = "set -ex\n\necho $ACTION\n\n\n[ \"$ACTION\" = \"build\" ] || exit 0\n[ \"$BUILD_VARIANTS\" = \"normal\" ] || exit 0\n\ndir=\"$TEMP_FILES_DIR/disk\"\ndmg=\"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.dmg\"\n\nrm -rf \"$dir\"\nmkdir \"$dir\"\ncp -R \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.app\" \"$dir\"\n\nmkdir \"$dir/.background\"\ncp \"$SRCROOT/DMG Artwork/dmgBackground.tiff\" \"$dir/.background\"\nln -s /Applications $dir\n\nrm -f \"$dmg\"\nhdiutil create  -verbose -srcfolder \"$dir\" -format UDRW -volname \"$PROJECT_NAME\" \"$dmg\"\n#hdiutil internet-enable -yes \"$dmg\"\nrm -rf \"$dir\"\n";
 		};
 		698665900FAF60BF002D1A84 /* Customizate DMG */ = {
 			isa = PBXShellScriptBuildPhase;
