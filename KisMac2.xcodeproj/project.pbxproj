@@ -653,20 +653,11 @@
 		003533FE06A5DD8500AB4577 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FDCA0CC223C28576004F8492 /* MapViews */,
 				6C94AA2C0ADF3FBC001BE161 /* GPSSatInfo */,
 				00971F3B06E4FA52004307EA /* BIViews */,
 				00A622A706FEE4FB005D248A /* Trace.h */,
 				00A622A806FEE4FB005D248A /* Trace.m */,
-				00CBA33E06DB8FDE000ACD19 /* MapView.h */,
-				00CBA33F06DB8FDE000ACD19 /* MapView.m */,
-				00C5F13206DE0EAF001EC02F /* MapViewAreaView.h */,
-				009D64F206FF73BA00B0F1EC /* MapViewAreaView.mm */,
-				00C5F12A06DE0C98001EC02F /* MapViewPrivate.h */,
-				00C5F12B06DE0C98001EC02F /* MapViewPrivate.m */,
-				0090AC8306E5E3250096C5FC /* MapControlPanel.h */,
-				0090AC8406E5E3250096C5FC /* MapControlPanel.m */,
-				005B12660730051A00906C36 /* MapControlItem.h */,
-				005B12670730051A00906C36 /* MapControlItem.m */,
 				00ED80A606E32C9600455A05 /* NetView.h */,
 				00ED80A706E32C9600455A05 /* NetView.m */,
 				00E1426B06E62A44009DC179 /* PointView.h */,
@@ -1064,6 +1055,23 @@
 				FD6A37CB224D1810008F8B03 /* Info.plist */,
 			);
 			path = KisMACTests;
+			sourceTree = "<group>";
+		};
+		FDCA0CC223C28576004F8492 /* MapViews */ = {
+			isa = PBXGroup;
+			children = (
+				00CBA33E06DB8FDE000ACD19 /* MapView.h */,
+				00CBA33F06DB8FDE000ACD19 /* MapView.m */,
+				00C5F13206DE0EAF001EC02F /* MapViewAreaView.h */,
+				009D64F206FF73BA00B0F1EC /* MapViewAreaView.mm */,
+				00C5F12A06DE0C98001EC02F /* MapViewPrivate.h */,
+				00C5F12B06DE0C98001EC02F /* MapViewPrivate.m */,
+				0090AC8306E5E3250096C5FC /* MapControlPanel.h */,
+				0090AC8406E5E3250096C5FC /* MapControlPanel.m */,
+				005B12660730051A00906C36 /* MapControlItem.h */,
+				005B12670730051A00906C36 /* MapControlItem.m */,
+			);
+			path = MapViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
