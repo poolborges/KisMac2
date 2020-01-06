@@ -409,7 +409,7 @@
     [WaveHelper setImportController:_importController];
     
     [_window beginSheet:[_importController window] completionHandler:^(NSModalResponse retCode){
-        [self crackDone:_window returnCode:retCode contextInfo:nil];
+        [self crackDone:self->_window returnCode:retCode contextInfo:nil];
     }];
 }
 

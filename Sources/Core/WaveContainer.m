@@ -675,29 +675,29 @@ typedef int (*SORTFUNC)(void *, const void *, const void *);
 	[queue addOperationWithBlock:^{
 		WaveSort ws;
 		
-		if (![_sortLock tryLock]) return;
+        if (![self->_sortLock tryLock]) return;
 		
-		_ascend = ascend;
+       self->_ascend = ascend;
 		ws.ascend = ascend ? 1 : -1;
-		ws.idList = _idList;
+        ws.idList =self->_idList;
 		
-		if ([ident isEqualToString:@"channel"])				qsort_r(_sortedList, _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)channelSort);
-		else if ([ident isEqualToString:@"primaryChannel"])	qsort_r(_sortedList, _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)primaryChannelSort);
-		else if ([ident isEqualToString:@"id"])				qsort_r(_sortedList, _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)idSort);
-		else if ([ident isEqualToString:@"bssid"])			qsort_r(_sortedList, _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)bssidSort);
-		else if ([ident isEqualToString:@"ssid"])			qsort_r(_sortedList, _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)ssidSort);
-		else if ([ident isEqualToString:@"wep"])			qsort_r(_sortedList, _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)wepSort);
-		else if ([ident isEqualToString:@"type"])			qsort_r(_sortedList, _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)typeSort);
-		else if ([ident isEqualToString:@"signal"])			qsort_r(_sortedList, _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)signalSort);
-		else if ([ident isEqualToString:@"maxsignal"])		qsort_r(_sortedList, _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)maxSignalSort);
-		else if ([ident isEqualToString:@"avgsignal"])		qsort_r(_sortedList, _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)avgSignalSort);
-		else if ([ident isEqualToString:@"packets"])		qsort_r(_sortedList, _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)packetsSort);
-		else if ([ident isEqualToString:@"data"])			qsort_r(_sortedList, _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)dataSort);
-		else if ([ident isEqualToString:@"lastseen"])		qsort_r(_sortedList, _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)lastSeenSort);
+		if ([ident isEqualToString:@"channel"])				qsort_r(self->_sortedList,self-> _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)channelSort);
+		else if ([ident isEqualToString:@"primaryChannel"])	qsort_r(self->_sortedList,self-> _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)primaryChannelSort);
+		else if ([ident isEqualToString:@"id"])				qsort_r(self->_sortedList,self-> _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)idSort);
+		else if ([ident isEqualToString:@"bssid"])			qsort_r(self->_sortedList,self-> _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)bssidSort);
+		else if ([ident isEqualToString:@"ssid"])			qsort_r(self->_sortedList,self-> _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)ssidSort);
+		else if ([ident isEqualToString:@"wep"])			qsort_r(self->_sortedList,self-> _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)wepSort);
+		else if ([ident isEqualToString:@"type"])			qsort_r(self->_sortedList,self-> _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)typeSort);
+		else if ([ident isEqualToString:@"signal"])			qsort_r(self->_sortedList,self-> _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)signalSort);
+		else if ([ident isEqualToString:@"maxsignal"])		qsort_r(self->_sortedList,self-> _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)maxSignalSort);
+		else if ([ident isEqualToString:@"avgsignal"])		qsort_r(self->_sortedList,self-> _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)avgSignalSort);
+		else if ([ident isEqualToString:@"packets"])		qsort_r(self->_sortedList,self-> _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)packetsSort);
+		else if ([ident isEqualToString:@"data"])			qsort_r(self->_sortedList,self-> _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)dataSort);
+		else if ([ident isEqualToString:@"lastseen"])		qsort_r(self->_sortedList,self-> _sortedCount, sizeof(NSUInteger), &ws, (SORTFUNC)lastSeenSort);
 		
 		else DBNSLog(@"Unknown sorting column. This is a bug and should never happen.");
 		
-		[_sortLock unlock];
+		[self->_sortLock unlock];
 	}];
 }
 
@@ -712,12 +712,12 @@ typedef int (*SORTFUNC)(void *, const void *, const void *);
 		NSUInteger w, x, y, z;
 		WaveSort ws;
 		
-		if (![_sortLock tryLock]) return;
+		if (![self->_sortLock tryLock]) return;
 		
-		_ascend = ascend;
+		self->_ascend = ascend;
 		ws.ascend = ascend ? 1 : -1;
-		ws.idList = _idList;
-		ws.sortedList = _sortedList;
+		ws.idList =self->_idList;
+		ws.sortedList =self->_sortedList;
 		
 		if ([ident isEqualToString:@"channel"])				func = (SORTFUNC)channelSort;
 		else if ([ident isEqualToString:@"primaryChannel"]) func = (SORTFUNC)primaryChannelSort;
@@ -734,27 +734,27 @@ typedef int (*SORTFUNC)(void *, const void *, const void *);
 		else if ([ident isEqualToString:@"lastseen"])		func = (SORTFUNC)lastSeenSort;
 		else
 		{
-			[_sortLock unlock];
+			[self->_sortLock unlock];
 			DBNSLog(@"Unknown sorting column. This is a bug and should never happen.");
 			return;
 		}
 		
-		for (y = 1 ; y <= _sortedCount ; ++y) {
+		for (y = 1 ; y <= self->_sortedCount ; ++y) {
 			
-			for (x = y - 1; x < (_sortedCount - y); ++x)
+			for (x = y - 1; x < (self->_sortedCount - y); ++x)
 			{
 				w = x + 1;
-				ret = (*func)(&ws, &_sortedList[x], &_sortedList[w]);
+				ret = (*func)(&ws, &self->_sortedList[x], &self->_sortedList[w]);
 				if (ret == NSOrderedDescending) {
 					sorted = NO;
 					
 					//switch places
-					z = _sortedList[x];
-					_sortedList[x] = _sortedList[w];
-					_sortedList[w] = z;
+					z = self->_sortedList[x];
+					self->_sortedList[x] = self->_sortedList[w];
+					self->_sortedList[w] = z;
 					
-					_idList[_sortedList[x]].changed = YES;
-					_idList[_sortedList[w]].changed = YES;
+					self->_idList[self->_sortedList[x]].changed = YES;
+					self->_idList[self->_sortedList[w]].changed = YES;
 				}
 			}
 			
@@ -763,20 +763,20 @@ typedef int (*SORTFUNC)(void *, const void *, const void *);
 			
 			sorted = YES;
 			
-			for (x = (_sortedCount - y) ; x >= y ; x--) {
+			for (x = (self->_sortedCount - y) ; x >= y ; x--) {
 				w = x - 1;
-				ret = (*func)(&ws, &_sortedList[w], &_sortedList[x]);
+				ret = (*func)(&ws, &self->_sortedList[w], &self->_sortedList[x]);
 				if (ret == NSOrderedDescending)
 				{
 					sorted = NO;
 					
 					//switch places
-					z = _sortedList[x];
-					_sortedList[x] = _sortedList[w];
-					_sortedList[w] = z;
+					z = self->_sortedList[x];
+					self->_sortedList[x] = self->_sortedList[w];
+					self->_sortedList[w] = z;
 					
-					_idList[_sortedList[x]].changed = YES;
-					_idList[_sortedList[w]].changed = YES;
+					self->_idList[self->_sortedList[x]].changed = YES;
+					self->_idList[self->_sortedList[w]].changed = YES;
 				}
 			}
 			
@@ -784,7 +784,7 @@ typedef int (*SORTFUNC)(void *, const void *, const void *);
 			sorted = YES;
 		}
 		
-		[_sortLock unlock];
+		[self->_sortLock unlock];
 	}];
 }
 

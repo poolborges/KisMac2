@@ -99,18 +99,18 @@
 		 {
 			 [self stopActiveAttacks];
 			 [self stopScan];
-			 _refreshGUI = NO;
+			 self->_refreshGUI = NO;
 			 
 			 NSInteger i;
 			 KismetXMLImporter *myImporter =  [[KismetXMLImporter alloc] init];
-			 for (i = 0; i < [[aOP URLs] count]; ++i)
+			 for (i = 0; i < [[self->aOP URLs] count]; ++i)
 			 {
-				 NSString *file = [[aOP URLs][i] path];
+				 NSString *file = [[self->aOP URLs][i] path];
 				 [self showBusyWithText: [NSString stringWithFormat: @"Importing %@ as Kismet XML", [file lastPathComponent]]];
-				 [myImporter performKismetImport: file withContainer:_container];
+				 [myImporter performKismetImport: file withContainer:self->_container];
 				 [self busyDone];
 			 }
-			 _refreshGUI = YES;
+			 self->_refreshGUI = YES;
 			 
 			 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
                  
@@ -118,7 +118,7 @@
              });
              
 			 [self refreshScanHierarch];
-			 [_window setDocumentEdited:YES];
+			 [self->_window setDocumentEdited:YES];
 			 
 			 [[NSNotificationCenter defaultCenter] postNotificationName:KisMACViewItemChanged object:self];
 		 }
@@ -154,7 +154,7 @@
 			 [self stopScan];
 			 
 			 [self showBusy:@selector(performImportNetstumbler:)
-					withArg:[[aOP URL] path]];
+					withArg:[[self->aOP URL] path]];
 			 
 			 [[NSNotificationCenter defaultCenter] postNotificationName:KisMACViewItemChanged
 																 object:self];

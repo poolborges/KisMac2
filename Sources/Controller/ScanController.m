@@ -332,41 +332,41 @@ static io_connect_t  root_port;    // a reference to the Root Power Domain IOSer
     if (_visibleTab == tabTraffic)
     {
         [mainQueue addOperationWithBlock:^{
-            [_trafficController updateGraph];
+            [self->_trafficController updateGraph];
         }];
     }
     else if (_visibleTab == tabNetworks)
     {
         [queue addOperationWithBlock:^{
             
-            if (_lastSorted)
+            if (self->_lastSorted)
             {
-                [_container sortWithShakerByColumn:_lastSorted order:_ascending];
+                [self->_container sortWithShakerByColumn:self->_lastSorted order:self->_ascending];
             }
             
             if (_complete)
             {
-                [mainQueue addOperationWithBlock:^{
-                    [_networkTable reloadData];
+                [self->mainQueue addOperationWithBlock:^{
+                    [self->_networkTable reloadData];
                 }];
                 
-                if (_detailsPaneVisibile)
+                if (self->_detailsPaneVisibile)
                 {
-                    [aInfoController reloadData];
+                    [self->aInfoController reloadData];
                 }
                 
-                net = [_container netAtIndex:_selectedRow];
+                net = [self->_container netAtIndex:self->_selectedRow];
                 
-                if ([net isCorrectSSID] && net != _curNet)
+                if ([net isCorrectSSID] && net != self->_curNet)
                 { //we lost our selected network
-                    for (i = [_container count]; i >= 0; --i)
+                    for (i = [self->_container count]; i >= 0; --i)
                     {
-                        net = [_container netAtIndex:i];
-                        if ([net isCorrectSSID] && net == _curNet)
+                        net = [self->_container netAtIndex:i];
+                        if ([net isCorrectSSID] && net == self->_curNet)
                         {
-                            _selectedRow = i;
-                            [mainQueue addOperationWithBlock:^{
-                                [_networkTable selectRowIndexes:[NSIndexSet indexSetWithIndex:_selectedRow]
+                            self->_selectedRow = i;
+                            [self->mainQueue addOperationWithBlock:^{
+                                [self->_networkTable selectRowIndexes:[NSIndexSet indexSetWithIndex:self->_selectedRow]
                                            byExtendingSelection: NO];
                             }];
                             break;
@@ -376,27 +376,27 @@ static io_connect_t  root_port;    // a reference to the Root Power Domain IOSer
             }
             else
             {
-                row = [_container nextChangedRow:BAD_ADDRESS];
+                row = [self->_container nextChangedRow:BAD_ADDRESS];
                 while (row != BAD_ADDRESS)
                 {
-                    net = [_container netAtIndex:row];
+                    net = [self->_container netAtIndex:row];
                     
-                    if ([net isCorrectSSID] && net == _curNet)
+                    if ([net isCorrectSSID] && net == self->_curNet)
                     {
-                        _selectedRow = row;
-                        [mainQueue addOperationWithBlock:^{
-                            if (_detailsPaneVisibile)
+                        self->_selectedRow = row;
+                        [self->mainQueue addOperationWithBlock:^{
+                            if (self->_detailsPaneVisibile)
                             {
-                                [aInfoController reloadData];
+                                [self->aInfoController reloadData];
                                 
-                                [_networkTable selectRowIndexes:[NSIndexSet indexSetWithIndex:_selectedRow]
+                                [self->_networkTable selectRowIndexes:[NSIndexSet indexSetWithIndex:self->_selectedRow]
                                            byExtendingSelection: NO];
                             }
                         }];
                     }
                     
-                    [_networkTable displayRect:[_networkTable rectOfRow:row]];
-                    row = [_container nextChangedRow:row];
+                    [self->_networkTable displayRect:[self->_networkTable rectOfRow:row]];
+                    row = [self->_container nextChangedRow:row];
                 }
             }
         }];
@@ -407,22 +407,22 @@ static io_connect_t  root_port;    // a reference to the Root Power Domain IOSer
             
             if (_complete)
             {
-                [mainQueue addOperationWithBlock:^{
-                    [aInfoController reloadData];
+                [self->mainQueue addOperationWithBlock:^{
+                    [self->aInfoController reloadData];
                 }];
                 
-                net = [_container netAtIndex:_selectedRow];
+                net = [self->_container netAtIndex:self->_selectedRow];
                 
-                if ([net isCorrectSSID] && net != _curNet)
+                if ([net isCorrectSSID] && net != self->_curNet)
                 { //we lost our selected network
-                    for (i = [_container count]; i >= 0; --i)
+                    for (i = [self->_container count]; i >= 0; --i)
                     {
-                        net = [_container netAtIndex:i];
-                        if ([net isCorrectSSID] && net == _curNet)
+                        net = [self->_container netAtIndex:i];
+                        if ([net isCorrectSSID] && net == self->_curNet)
                         {
-                            _selectedRow = i;
-                            [mainQueue addOperationWithBlock:^{
-                                [_networkTable selectRowIndexes:[NSIndexSet indexSetWithIndex:_selectedRow]
+                            self->_selectedRow = i;
+                            [self->mainQueue addOperationWithBlock:^{
+                                [self->_networkTable selectRowIndexes:[NSIndexSet indexSetWithIndex:self->_selectedRow]
                                            byExtendingSelection: NO];
                             }];
                             break;
@@ -432,24 +432,24 @@ static io_connect_t  root_port;    // a reference to the Root Power Domain IOSer
             }
             else
             {
-                row = [_container nextChangedRow:BAD_ADDRESS];
+                row = [self->_container nextChangedRow:BAD_ADDRESS];
                 
                 while (row != BAD_ADDRESS)
                 {
-                    net = [_container netAtIndex:row];
-                    if ([net isCorrectSSID] && net == _curNet)
+                    net = [self->_container netAtIndex:row];
+                    if ([net isCorrectSSID] && net == self->_curNet)
                     {
-                        _selectedRow = row;
+                        self->_selectedRow = row;
                         
-                        [mainQueue addOperationWithBlock:^{
-                            [aInfoController reloadData];
+                        [self->mainQueue addOperationWithBlock:^{
+                            [self->aInfoController reloadData];
                             
-                            [_networkTable selectRowIndexes:[NSIndexSet indexSetWithIndex:_selectedRow]
+                            [self->_networkTable selectRowIndexes:[NSIndexSet indexSetWithIndex:self->_selectedRow]
                                        byExtendingSelection: NO];
                         }];
                     }
                     
-                    row = [_container nextChangedRow:row];
+                    row = [self->_container nextChangedRow:row];
                 }
             }
         }];
