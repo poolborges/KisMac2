@@ -174,7 +174,7 @@ static NSInteger KismetInstances = 0;
 		
 	if((len = read(sockd, &netbuf[0], 2048)) < 0) { // read it in
 		DBNSLog(@"Kismet Server read failed"); // we can't read in!
-		return NO;
+		return nil;
 	}
 	
 	netarray = @[];

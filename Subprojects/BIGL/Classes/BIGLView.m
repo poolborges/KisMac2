@@ -56,6 +56,7 @@ NSString *const BIGLMainViewResized = @"BIGLMainViewResized";
 	[self reshape];
 	
 	_initialized = YES;
+    [super prepareOpenGL];
 }
 
 + (NSOpenGLPixelFormat*)defaultPixelFormat
@@ -209,7 +210,7 @@ NSString *const BIGLMainViewResized = @"BIGLMainViewResized";
 	[_lock lock];
 	[[self openGLContext] makeCurrentContext];
 	
-	glReadPixels(x, y, width, height, GL_RGBA, GL_UNSIGNED_BYTE, imageBuffer);
+	glReadPixels((int)x, (int)y, (int)width, (int)height, GL_RGBA, GL_UNSIGNED_BYTE, imageBuffer);
 	[_lock unlock];
 	
 	b = [[NSBitmapImageRep alloc] initWithBitmapDataPlanes: nil

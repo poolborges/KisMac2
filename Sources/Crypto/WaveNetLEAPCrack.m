@@ -155,7 +155,7 @@ struct leapClientData
         
         NtPasswordHash(wrd, i+1, pwhash);
 
-		if (c && pwhash)
+		if (c != NULL && pwhash[0] != '\0')
 		{
 			for (curKey = 0; curKey < keys; ++curKey)
 			{

@@ -167,6 +167,7 @@ static NSMutableDictionary *_instances;
 }
 
 - (NSSet<NSString *> *)cachedKeys {
+    _cachedKeys = NULL;
     return [self.cachedKeysMutable copy];
 }
 
