@@ -211,14 +211,13 @@
 			};
 			buildConfigurationList = 00B4DCBB086C6A35009A8F23 /* Build configuration list for PBXProject "BIGL" */;
 			compatibilityVersion = "Xcode 6.3";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
 				en,
+				fr,
+				de,
+				ja,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* BIGL */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;

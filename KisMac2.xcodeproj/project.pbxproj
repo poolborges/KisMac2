@@ -1139,15 +1139,14 @@
 			};
 			buildConfigurationList = 00A915960858D6410093943F /* Build configuration list for PBXProject "KisMac2" */;
 			compatibilityVersion = "Xcode 6.3";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
-				Spanish,
 				en,
+				es,
+				ja,
+				fr,
+				de,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* KisMAC */;
 			projectDirPath = "";

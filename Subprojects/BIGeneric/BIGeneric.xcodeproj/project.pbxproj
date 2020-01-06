@@ -272,14 +272,13 @@
 			};
 			buildConfigurationList = 00B4DCCE086C6B8F009A8F23 /* Build configuration list for PBXProject "BIGeneric" */;
 			compatibilityVersion = "Xcode 6.3";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
 				en,
+				ja,
+				fr,
+				de,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* BIGeneric */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
