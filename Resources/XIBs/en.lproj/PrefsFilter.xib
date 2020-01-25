@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14868" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <development version="6300" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14868"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PrefsFilter">
@@ -21,23 +21,21 @@
             <rect key="frame" x="0.0" y="0.0" width="439" height="246"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <textField verticalHuggingPriority="750" id="220">
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="220">
                     <rect key="frame" x="223" y="11" width="142" height="22"/>
                     <autoresizingMask key="autoresizingMask"/>
-                    <animations/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" title="01:23:45:67:89:AB" drawsBackground="YES" id="234">
                         <font key="font" metaFont="system"/>
-                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
                         <action selector="setValueForSender:" target="-2" id="228"/>
                     </connections>
                 </textField>
-                <button verticalHuggingPriority="750" id="219">
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="219">
                     <rect key="frame" x="367" y="3" width="71" height="32"/>
                     <autoresizingMask key="autoresizingMask"/>
-                    <animations/>
                     <buttonCell key="cell" type="push" title="add" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="233">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -49,10 +47,9 @@ DQ
                         <action selector="addItem:" target="-2" id="227"/>
                     </connections>
                 </button>
-                <button verticalHuggingPriority="750" id="217">
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="217">
                     <rect key="frame" x="0.0" y="3" width="83" height="32"/>
                     <autoresizingMask key="autoresizingMask"/>
-                    <animations/>
                     <buttonCell key="cell" type="push" title="remove" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="232">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -62,29 +59,28 @@ DQ
                         <action selector="removeItem:" target="-2" id="225"/>
                     </connections>
                 </button>
-                <scrollView autohidesScrollers="YES" horizontalLineScroll="16" horizontalPageScroll="10" verticalLineScroll="16" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="213">
+                <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="16" horizontalPageScroll="10" verticalLineScroll="16" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="213">
                     <rect key="frame" x="0.0" y="42" width="439" height="184"/>
                     <autoresizingMask key="autoresizingMask"/>
-                    <clipView key="contentView" id="bcI-cx-kl4">
-                        <rect key="frame" x="1" y="17" width="437" height="166"/>
+                    <clipView key="contentView" ambiguous="YES" id="bcI-cx-kl4">
+                        <rect key="frame" x="1" y="0.0" width="437" height="183"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" autosaveName="KisMAC_FilterListTable" rowHeight="14" headerView="238" id="215">
+                            <tableView verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" autosaveName="KisMAC_FilterListTable" rowHeight="14" headerView="238" id="215">
                                 <rect key="frame" x="0.0" y="0.0" width="437" height="166"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <animations/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 <tableColumns>
                                     <tableColumn width="433.83099365234375" minWidth="40" maxWidth="1000" id="214">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="BSSID List">
-                                            <font key="font" metaFont="smallSystem"/>
+                                            <font key="font" metaFont="message" size="11"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
                                         </tableHeaderCell>
                                         <textFieldCell key="dataCell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" alignment="left" id="235">
-                                            <font key="font" metaFont="smallSystem"/>
+                                            <font key="font" metaFont="message" size="11"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </textFieldCell>
@@ -97,28 +93,22 @@ DQ
                                 </connections>
                             </tableView>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </clipView>
-                    <animations/>
-                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" controlSize="small" horizontal="YES" id="237">
+                    <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" controlSize="small" horizontal="YES" id="237">
                         <rect key="frame" x="1" y="172" width="426" height="11"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </scroller>
-                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" controlSize="small" horizontal="NO" id="236">
+                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" controlSize="small" horizontal="NO" id="236">
                         <rect key="frame" x="427" y="17" width="11" height="155"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </scroller>
                     <tableHeaderView key="headerView" id="238">
                         <rect key="frame" x="0.0" y="0.0" width="437" height="17"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </tableHeaderView>
                 </scrollView>
             </subviews>
-            <animations/>
+            <point key="canvasLocation" x="140" y="154"/>
         </customView>
     </objects>
 </document>
