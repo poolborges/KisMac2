@@ -1,4 +1,4 @@
-# PB-KisMac2 Fork of KisMac2 0.3.4-alpha4
+# PB-KisMac2 Fork of KisMac2 0.3.4-alpha5
 
 This fork will be temporary call (codename) PB-KisMac2
 
@@ -42,10 +42,13 @@ How Build:
 * open KisMac2.xcworkspace
 * Build
 
-Current Developer and Origin:
+Current Developer:
 -------
 
 This project, current code name PB-KisMac2 (Should be KisMac3 ??), is an active project to continue where development of KisMac2 has stopped. You are welcome to contact and join in the project.
+
+Origin:
+-------
 
 Vitalii Parovishnyk (Korich) lead developer of KisMac2. KisMac2 not actively maintained since Aug 28, 2018
 
