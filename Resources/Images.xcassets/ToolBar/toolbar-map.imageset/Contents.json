@@ -2,17 +2,20 @@
   "images" : [
     {
       "idiom" : "mac",
-      "scale" : "1x",
-      "filename" : "map.png"
+      "filename" : "map.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "mac",
-      "scale" : "2x",
-      "filename" : "map@2x.png"
+      "filename" : "map@2x.png",
+      "scale" : "2x"
     }
   ],
   "info" : {
     "version" : 1,
     "author" : "xcode"
+  },
+  "properties" : {
+    "template-rendering-intent" : "template"
   }
 }

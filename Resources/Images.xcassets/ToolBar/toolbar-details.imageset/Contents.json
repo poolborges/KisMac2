@@ -2,17 +2,20 @@
   "images" : [
     {
       "idiom" : "mac",
-      "scale" : "1x",
-      "filename" : "toolbar-details.png"
+      "filename" : "toolbar-details.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "mac",
-      "scale" : "2x",
-      "filename" : "toolbar-details@2x.png"
+      "filename" : "toolbar-details@2x.png",
+      "scale" : "2x"
     }
   ],
   "info" : {
     "version" : 1,
     "author" : "xcode"
+  },
+  "properties" : {
+    "template-rendering-intent" : "template"
   }
 }

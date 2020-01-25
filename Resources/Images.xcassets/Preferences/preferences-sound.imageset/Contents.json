@@ -2,17 +2,20 @@
   "images" : [
     {
       "idiom" : "mac",
-      "scale" : "1x",
-      "filename" : "preferences-sound.png"
+      "filename" : "preferences-sound.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "mac",
-      "scale" : "2x",
-      "filename" : "preferences-sound@2x.png"
+      "filename" : "preferences-sound@2x.png",
+      "scale" : "2x"
     }
   ],
   "info" : {
     "version" : 1,
     "author" : "xcode"
+  },
+  "properties" : {
+    "template-rendering-intent" : "template"
   }
 }
