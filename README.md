@@ -15,7 +15,7 @@ PB for (PoolBorges)
 
 KisMAC is a free, open source wireless stumbling and security tool for Mac OS X. 
 
-<img src="https://raw.githubusercontent.com/poolborges/KisMac2/master/Resources/screenshot.png">
+<img src="https://raw.githubusercontent.com/poolborges/KisMac2/master/Resources/screenshot_1.png">
 
 Issue tracking:
 -------
@@ -47,7 +47,7 @@ Current Developer and Origin:
 
 This project, current code name PB-KisMac2 (Should be KisMac3 ??), is an active project to continue where development of KisMac2 has stopped. You are welcome to contact and join in the project.
 
-Vitalii Parovishnyk (Korich) lead developer of KisMac2. KisMac2 not actively maintained since 2011
+Vitalii Parovishnyk (Korich) lead developer of KisMac2. KisMac2 not actively maintained since Aug 28, 2018
 
 Michael Rossberg / Geoffrey Kruse / kismac-ng.org is the original KisMac and the project is not actively maintained since 2011, please see the <a href="https://en.wikipedia.org/wiki/KisMAC">KisMac Wikipedia page</a> for more information on the earlier history of that project.
 
