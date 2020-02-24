@@ -17,9 +17,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
     - name: Checkout submodules
-      uses: srt32/git-actions@v0.0.3
-      with:
-        args: git submodule update --init --recursive
+      run: git submodule update --init --recursive
     - name: Start xcodebuild build
       run: set -o pipefail && xcodebuild clean build -workspace "${PROJ_WORKSPACE}" -scheme "${PROJ_SCHEME}" -destination "${PROJ_DESTINATION}"
       env: 
